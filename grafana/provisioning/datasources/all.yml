@@ -1,0 +1,14 @@
+apiVersion: 1
+
+deleteDatasources:
+  - name: londiniumData
+
+datasources:
+  - name: londiniumData
+    type: mysql
+    url: 192.168.56.1:3306
+    database: emisdata
+    user: grafana
+    password: grafanapassword
+    isDefault: true
+    editable: true

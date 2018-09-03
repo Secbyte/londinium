@@ -1,0 +1,17 @@
+version: '3'
+services:
+  grafana:
+   container_name: grafana
+   image: "londinium/grafana:latest"
+   ports:
+    - "3000:3000"
+  locations:
+    container_name: locations
+    image: "londinium/locations:latest"
+    ports:
+     - "32768:80"     
+  appdata:
+    container_name: appdata
+    image: "londinium/database:latest"
+    ports:
+     - "3308:3306"     
